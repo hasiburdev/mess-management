@@ -1,9 +1,11 @@
+// @ignore-ts
+
 import React from "react";
 
 const Login = () => {
-  const handleLogin = (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
+  const handleLogin = (event: any) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
     console.log(data);
   };
